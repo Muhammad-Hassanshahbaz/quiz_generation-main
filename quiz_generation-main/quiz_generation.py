@@ -21,7 +21,6 @@ app.add_middleware(
 # Initialize Groq client
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-
 class QuizRequest(BaseModel):
     text: str
     num_questions: int = 10
@@ -116,12 +115,6 @@ async def download_quiz_endpoint(request: QuizRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
 @app.get("/")
 async def welcome():
-    return {"message": "Welcome to Urdu Fashion Assistant API!"}
-
-
-# For Vercel deployment
-from mangum import Mangum
-handler = Mangum(app)
+    return {"message": "Welcome to the Quiz Generation API!"}
