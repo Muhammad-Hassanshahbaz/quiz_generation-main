@@ -115,6 +115,12 @@ async def download_quiz_endpoint(request: QuizRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@app.get("/")
+async def welcome():
+    return {"message": "Welcome to Urdu Fashion Assistant API!"}
+
+
 # For Vercel deployment
 from mangum import Mangum
 handler = Mangum(app)
