@@ -1,31 +1,15 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "quiz_generation.py",
-            "use": "@vercel/python",
-            "config": {
-                "runtime": "python3.11",
-                "maxLambdaSize": "15mb",
-                "includeFiles": "**/*.py"
-            }
-        }
+    {
+    "src": "quiz_generation.py",
+    "use": "@vercel/python"
+    }
     ],
     "routes": [
-        {
-            "src": "/generate",
-            "dest": "quiz_generation.handler",
-            "methods": ["POST"]
-        },
-        {
-            "src": "/download",
-            "dest": "quiz_generation.handler",
-            "methods": ["POST"]
-        },
-        {
-            "src": "/",
-            "dest": "quiz_generation.handler",
-            "methods": ["GET"]
-        }
+    {
+    "src": "/(.*)",
+    "dest": "quiz_generation.py"
+    }
     ]
-}
+    }
