@@ -5,7 +5,7 @@
         "src": "quiz_generation.py",
         "use": "@vercel/python",
         "config": { 
-          "runtime": "python3.13"
+          "runtime": "python3.9"
         }
       }
     ],
