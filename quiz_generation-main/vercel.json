@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
     {
-    "src": "quiz_generation.py",
+    "src": "api/quiz_generation.py",
     "use": "@vercel/python"
     }
     ],
     "routes": [
     {
     "src": "/(.*)",
-    "dest": "quiz_generation.py"
+    "dest": "api/quiz_generation.py"
     }
     ]
-    }
+}
