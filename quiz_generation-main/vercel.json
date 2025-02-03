@@ -13,7 +13,7 @@
     "routes": [
     {
     "src": "/(.*)",
-    "dest": "api/quiz_generation.py",
+    "dest": "api/quiz_generation.handler",
     "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
     }
     ]
