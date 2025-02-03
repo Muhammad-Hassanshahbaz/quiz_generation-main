@@ -14,5 +14,8 @@
         "src": "/(.*)",
         "dest": "quiz_generation.py"
       }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }
+]
+
   }
