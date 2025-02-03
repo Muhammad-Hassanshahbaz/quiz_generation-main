@@ -12,7 +12,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "quiz_generation.py"
+        "dest": "/"
       }
     ],
     "rewrites": [{ "source": "/(.*)", "destination": "/" }
