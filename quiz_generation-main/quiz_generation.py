@@ -19,7 +19,8 @@ app.add_middleware(
 )
 
 # Initialize Groq client
-client = Groq(api_key="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")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
 
 class QuizRequest(BaseModel):
     text: str
